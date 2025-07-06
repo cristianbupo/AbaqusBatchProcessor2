@@ -34,6 +34,7 @@ add_executable(batchgenerator
 )
 
 target_link_libraries(batchgenerator Qt${QT_VERSION_MAJOR}::Core)
+target_include_directories(batchgenerator PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(batchgenerator PRIVATE geometry2d)
 
 # Gmsh

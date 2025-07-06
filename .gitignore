@@ -31,3 +31,6 @@ CMakeLists.txt.user
 *.exe
 *.out
 *.app
+
+# Difference files
+*.diff

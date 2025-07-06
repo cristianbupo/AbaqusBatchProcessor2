@@ -24,103 +24,105 @@ int main(int argc, char *argv[])
     parser.addVersionOption();
     //    parser.addPositionalArgument("source", QCoreApplication::translate("main", "Configuration file."));
 
-    std::string rhitaD[] {R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\nbd_1_1.msh)",
-                         R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\nbd_2_1.msh)",
-                         R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\nbd_3_1.msh)",
-                         R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\nbd_4_1.msh)",
-                         R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\nbd_5_1.msh)"};
+    printf("I'm here!\n");
+    
+    std::string rhitaD[] {R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\nbd_1_1.msh)",
+                         R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\nbd_2_1.msh)",
+                         R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\nbd_3_1.msh)",
+                         R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\nbd_4_1.msh)",
+                         R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\nbd_5_1.msh)"};
 
-    std::string rhitaL1[] {R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL1\nbl1_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL1\nbl2_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL1\nbl3_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL1\nbl4_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL1\nbl5_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL1\nbl6_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL1\nbl7_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL1\nbl8_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL1\nbl9_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL1\nbl10_1.msh)"};
+    std::string rhitaL1[] {R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL1\nbl1_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL1\nbl2_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL1\nbl3_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL1\nbl4_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL1\nbl5_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL1\nbl6_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL1\nbl7_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL1\nbl8_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL1\nbl9_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL1\nbl10_1.msh)"};
 
-    std::string rhitaL2[] {R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL2\nbl1_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL2\nbl2_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL2\nbl3_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL2\nbl4_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL2\nbl5_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL2\nbl6_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL2\nbl7_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL2\nbl8_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL2\nbl9_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaL2\nbl10_2.msh)"};
-
-
-
-    std::string rhitaH1[] {R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH1\nbh1_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH1\nbh2_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH1\nbh3_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH1\nbh4_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH1\nbh5_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH1\nbh6_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH1\nbh7_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH1\nbh8_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH1\nbh9_1.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH1\nbh10_1.msh)"};
-
-    std::string rhitaH2[] {R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH2\nbh1_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH2\nbh2_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH2\nbh3_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH2\nbh4_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH2\nbh5_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH2\nbh6_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH2\nbh7_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH2\nbh8_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH2\nbh9_2.msh)",
-                           R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\rhitaH2\nbh10_2.msh)"};
+    std::string rhitaL2[] {R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL2\nbl1_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL2\nbl2_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL2\nbl3_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL2\nbl4_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL2\nbl5_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL2\nbl6_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL2\nbl7_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL2\nbl8_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL2\nbl9_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaL2\nbl10_2.msh)"};
 
 
 
-    std::string keelL0[] {R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL0\yn1.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL0\yn2.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL0\yn3.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL0\yn4.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL0\yn5.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL0\yn6.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL0\yn7.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL0\yn8.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL0\yn9.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL0\yn10.msh)"};
+    std::string rhitaH1[] {R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH1\nbh1_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH1\nbh2_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH1\nbh3_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH1\nbh4_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH1\nbh5_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH1\nbh6_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH1\nbh7_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH1\nbh8_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH1\nbh9_1.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH1\nbh10_1.msh)"};
 
-    std::string keelL1[] {R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL1\yns1.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL1\yns2.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL1\yns3.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL1\yns4.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL1\yns5.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL1\yns6.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL1\yns7.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL1\yns8.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL1\yns9.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelL1\yns10.msh)"};
+    std::string rhitaH2[] {R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH2\nbh1_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH2\nbh2_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH2\nbh3_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH2\nbh4_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH2\nbh5_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH2\nbh6_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH2\nbh7_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH2\nbh8_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH2\nbh9_2.msh)",
+                           R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\rhitaH2\nbh10_2.msh)"};
 
-    std::string keelH0[] {R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH0\wn1.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH0\wn2.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH0\wn3.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH0\wn4.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH0\wn5.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH0\wn6.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH0\wn7.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH0\wn8.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH0\wn9.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH0\wn10.msh)"};
 
-    std::string keelH1[] {R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH1\wns1.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH1\wns2.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH1\wns3.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH1\wns4.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH1\wns5.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH1\wns6.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH1\wns7.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH1\wns8.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH1\wns9.msh)",
-                          R"(C:\Users\s\Projects\GitHub\AbaqusBatchProcessor2\meshes\keelH1\wns10.msh)"};
+
+    std::string keelL0[] {R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL0\yn1.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL0\yn2.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL0\yn3.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL0\yn4.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL0\yn5.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL0\yn6.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL0\yn7.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL0\yn8.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL0\yn9.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL0\yn10.msh)"};
+
+    std::string keelL1[] {R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL1\yns1.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL1\yns2.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL1\yns3.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL1\yns4.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL1\yns5.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL1\yns6.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL1\yns7.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL1\yns8.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL1\yns9.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelL1\yns10.msh)"};
+
+    std::string keelH0[] {R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH0\wn1.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH0\wn2.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH0\wn3.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH0\wn4.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH0\wn5.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH0\wn6.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH0\wn7.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH0\wn8.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH0\wn9.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH0\wn10.msh)"};
+
+    std::string keelH1[] {R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH1\wns1.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH1\wns2.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH1\wns3.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH1\wns4.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH1\wns5.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH1\wns6.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH1\wns7.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH1\wns8.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH1\wns9.msh)",
+                          R"(C:\Users\crist\git\AbaqusBatchProcessor2\meshes\keelH1\wns10.msh)"};
 
     if(!QDir("results").exists()) QDir().mkdir("results");
 
